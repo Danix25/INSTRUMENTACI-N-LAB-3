@@ -11,7 +11,7 @@ Daniel Leonardo López Castillo
 Para el desarrollo de la práctica, se inició con el montaje del circuito mostrado a continuación, cuya función es la adquisición de la señal fotopletismográfica (PPG) mediante el uso de un acoplador óptico TCST110, permitiendo registrar las variaciones del volumen sanguíneo periférico a partir de cambios en la intensidad de la luz reflejada. 
 
 <div align="center">
-<img width="517" height="185" alt="image" src="https://github.com/user-attachments/assets/7a67b6c8-be41-4db8-ab40-1b75aa588c9e" 
+<img width="517" height="285" alt="image" src="https://github.com/user-attachments/assets/7a67b6c8-be41-4db8-ab40-1b75aa588c9e" 
 </div>
 
 
