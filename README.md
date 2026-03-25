@@ -39,6 +39,5 @@ Debido a lo anterior, se optó por sustituir el sensor de reflectancia modificad
 ## Cold Pressor Test (CPT)
 
 
-
 # PARTE B
 # PARTE C
