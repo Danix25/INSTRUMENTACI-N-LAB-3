@@ -17,7 +17,7 @@ Para el desarrollo de la práctica, se inició con el montaje del circuito mostr
 Adicionalmente, se realizó la modificación del acoplador óptico TCST110 con el fin de optimizar la captura de la señal, adaptándolo para su funcionamiento como sensor de reflectancia. Esta configuración permite que la emisión y detección de la luz se realicen en la misma superficie, facilitando la medición de las variaciones en la intensidad de la luz reflejada por el tejido, las cuales están directamente relacionadas con los cambios en el volumen sanguíneo periférico.
 
 <div align="center">
-<img width="400" height="137" alt="image" src="https://github.com/user-attachments/assets/00de536d-990a-4d36-9fb9-f48f14742b2a" />
+<img width="400" height="187" alt="image" src="https://github.com/user-attachments/assets/00de536d-990a-4d36-9fb9-f48f14742b2a" />
 </div>
 
 Para verificar el funcionamiento del montaje, se ubicaba el dedo sobre el sensor modificado para que en la gráfica se visualizara los cambios en la exposición de luz sobre dicho sensor. Sin embargo, al visualizar la gráfica no se percibian cambios significantes en las variaciones cuando se colocaba el dedo sobre el sensor y se quitaba del mismo. A esto, se verificó que el led infrarrojo que posee el sensor modificado estuviera encendido, lo que determinaba si el circuito estaba montado de manera incorrecta, lo cual se observó con una ayuda de una cámara de celular, reflejando que el led si estaba encendido:
