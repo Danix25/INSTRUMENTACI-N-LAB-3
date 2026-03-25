@@ -20,11 +20,15 @@ Adicionalmente, se realizó la modificación del acoplador óptico TCST110 con e
 <img width="400" height="187" alt="image" src="https://github.com/user-attachments/assets/00de536d-990a-4d36-9fb9-f48f14742b2a" />
 </div>
 
-Para verificar el funcionamiento del montaje, se ubicaba el dedo sobre el sensor modificado para que en la gráfica se visualizara los cambios en la exposición de luz sobre dicho sensor. Sin embargo, al visualizar la gráfica no se percibian cambios significantes en las variaciones cuando se colocaba el dedo sobre el sensor y se quitaba del mismo. A esto, se verificó que el led infrarrojo que posee el sensor modificado estuviera encendido, lo que determinaba si el circuito estaba montado de manera incorrecta, lo cual se observó con una ayuda de una cámara de celular, reflejando que el led si estaba encendido:
+Para verificar el correcto funcionamiento del montaje, se procedió a ubicar el dedo sobre el sensor previamente modificado, con el objetivo de observar en la señal adquirida las variaciones asociadas a los cambios en la intensidad de luz incidente sobre el dispositivo. No obstante, al analizar la gráfica obtenida, no se evidenciaron cambios significativos en la señal al colocar o retirar el dedo del sensor.
+
+Ante esta situación, se realizó una verificación del estado de operación del LED infrarrojo integrado en el sensor, con el fin de descartar posibles errores en el montaje del circuito. Dado que la radiación infrarroja no es visible al ojo humano, se empleó la cámara de un dispositivo móvil para confirmar su emisión. Mediante este procedimiento, se constató que el LED se encontraba encendido, lo que sugiere que el circuito estaba correctamente alimentado y funcional desde el punto de vista de emisión óptica:
 
 <div align="center">
 <img width="225" height="257" alt="image" src="https://github.com/user-attachments/assets/938778f6-914a-4ed2-8b96-5ec797344bb3" />
 </div>
+
+Con base en lo anterior, se optó por realizar una prueba adicional consistente en acercar una fuente de iluminación externa al sensor, con el fin de evaluar su respuesta ante variaciones más evidentes en la intensidad luminosa. Para ello, se utilizó una linterna, la cual se acercaba y alejaba del sensor en distintos intervalos de tiempo, permitiendo observar cambios claramente distinguibles en la señal registrada. A partir de esta prueba, se evidenció que el sistema respondía adecuadamente a variaciones significativas de luz; sin embargo, se concluyó que el sensor implementado no presentaba la sensibilidad suficiente para detectar las pequeñas variaciones asociadas al volumen sanguíneo periférico. En consecuencia, la señal fotopletismográfica no pudo ser visualizada de manera adecuada bajo las condiciones del montaje realizado.
 
 
 # PARTE B
