@@ -65,13 +65,20 @@ Para la implementación del procedimiento en la práctica de laboratorio, se est
 
 El índice pletismográfico quirúrgico (SPI) es una herramienta de monitoreo continuo y no invasivo, diseñada para cuantificar el equilibrio entre la nocicepción (respuesta fisiológica ante un estímulo doloroso) y la analgesia (efecto de los fármacos analgésicos) en pacientes bajo anestesia general.
 
+<div align="center">
+<img width="321" height="280" alt="image" src="https://github.com/user-attachments/assets/73a2252b-d554-4006-b7b3-4d3952ac9c2d" />
+</div>
+
 Este índice se obtiene a partir de la señal de fotopletismografía (PPG), adquirida mediante un oxímetro de pulso colocado típicamente en el dedo. A través de esta señal, es posible inferir la actividad del sistema nervioso simpático. En presencia de un estímulo nociceptivo, se produce un aumento del tono simpático, lo que conlleva a fenómenos como la vasoconstricción periférica y el incremento de la frecuencia cardíaca.
 
 El SPI toma valores en un rango de 0 a 100, donde el intervalo entre 20 y 50 se considera óptimo para una analgesia adecuada durante el procedimiento quirúrgico. Valores superiores a 50 indican un incremento en el nivel de estrés nociceptivo, lo que sugiere la necesidad de una mayor administración de analgésicos.
 
 <div align="center">
-<img width="321" height="280" alt="image" src="https://github.com/user-attachments/assets/73a2252b-d554-4006-b7b3-4d3952ac9c2d" />
+<img width="387" height="287" alt="image" src="https://github.com/user-attachments/assets/fc1fe37a-c29d-494f-ae61-cc28e0f7ea3e" />
 </div>
+
+
+
 
 La formula estándar del índice pletismográfico quirurgico es:
 
