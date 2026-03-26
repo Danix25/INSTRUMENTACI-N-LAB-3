@@ -106,5 +106,5 @@ Donde:
 
 - C. L. von Baeyer, T. Piira, C. T. Chambers, M. Trapanotto y L. K. Zeltzer, “Guidelines for the Cold Pressor Task as an experimental pain stimulus for use with children,” The Journal of Pain, vol. 6, no. 4, pp. 218–227, Apr. 2005, doi: 10.1016/j.jpain.2005.01.349. [Online]. Available: https://www.jpain.org/article/S1526-5900(05)00366-4/fulltext
 - Ferretronica, “Sensor MAX30102 frecuencia cardiaca y oxígeno en sangre,” Ferretronica, 2026. [Online]. Available: https://www.ferretronica.com/products/sensor-max30102-frecuencia-cardiaca-y-oxigeno-en-sangre
-- S. K. Oh, Y. J. Won, and B. G. Lim, “Surgical pleth index monitoring in perioperative pain management: usefulness and limitations,” Korean J. Anesthesiol., vol. 77, no. 1, pp. 31–45, Feb. 2024, doi: 10.4097/kja.23158.
+- S. K. Oh, Y. J. Won, and B. G. Lim, “Surgical pleth index monitoring in perioperative pain management: usefulness and limitations,” Korean J. Anesthesiol., vol. 77, no. 1, pp. 31–45, Feb. 2024, doi: 10.4097/kja.23158. [Online]. Available: https://pmc.ncbi.nlm.nih.gov/articles/PMC10834712/
 - Azucena Reyes, Javier Márquez, José Athié, “Comparing analgesic nociception index to surgical plethysmographic index in laparoscopic opioid analgesia” Revista Mexicana (SciELO), 2024. [Online]. Available: https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0484-79032024000300151
