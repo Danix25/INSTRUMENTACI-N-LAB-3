@@ -93,6 +93,9 @@ Donde:
 
 - **Constantes 0.33 y 0.67:** Estos coeficientes corresponden a los pesos asignados al intervalo entre latidos y a la amplitud de la onda de pulso, respectivamente. En la formulación del índice, se otorga mayor ponderación a la PPGA (67 %) en comparación con el HBI (33 %), debido a que la amplitud de la señal constituye un indicador más sensible y de respuesta más rápida frente a cambios en la actividad del sistema nervioso simpático que las variaciones en la frecuencia cardíaca por sí solas.
 
+## Codigo Matlab (SPI)
+
+
   
 
 
