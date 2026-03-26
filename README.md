@@ -30,7 +30,7 @@ Ante esta situación, se realizó una verificación del estado de operación del
 
 Con base en lo anterior, se optó por realizar una prueba adicional consistente en acercar una fuente de iluminación externa al sensor, con el fin de evaluar su respuesta ante variaciones más evidentes en la intensidad luminosa. Para ello, se utilizó una linterna, la cual se acercaba y alejaba del sensor en distintos intervalos de tiempo, permitiendo observar cambios claramente distinguibles en la señal registrada. A partir de esta prueba, se evidenció que el sistema respondía adecuadamente a variaciones significativas de luz; sin embargo, se concluyó que el sensor implementado no presentaba la sensibilidad suficiente para detectar las pequeñas variaciones asociadas al volumen sanguíneo periférico. En consecuencia, la señal fotopletismográfica no pudo ser visualizada de manera adecuada bajo las condiciones del montaje realizado.
 
-<div aling="center">
+<div align="center">
 <img width="231" height="146" alt="image" src="https://github.com/user-attachments/assets/23ff2c6b-0ba3-4ea2-ae08-967880b06f82" />
 </div>
 
