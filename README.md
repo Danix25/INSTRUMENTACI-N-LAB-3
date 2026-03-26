@@ -34,7 +34,10 @@ Debido a lo anterior, se optó por sustituir el sensor de reflectancia modificad
 
 <div align="center">
 <img width="231" height="146" alt="image" src="https://github.com/user-attachments/assets/23ff2c6b-0ba3-4ea2-ae08-967880b06f82" />
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/8cdd763b-1f35-487c-9b58-ca236ecbd44c" />
 </div>
+
+
 
 ## Cold Pressor Test (CPT)
 
