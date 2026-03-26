@@ -73,7 +73,12 @@ El SPI toma valores en un rango de 0 a 100, donde el intervalo entre 20 y 50 se 
 <img width="321" height="280" alt="image" src="https://github.com/user-attachments/assets/73a2252b-d554-4006-b7b3-4d3952ac9c2d" />
 </div>
 
+La formula estándar del índice pletismográfico quirurgico es:
 
+$$
+SPI = 100 - (0.33 \cdot HBI + 0.67 \cdot PPGA)
+$$
+  
 
 
 
