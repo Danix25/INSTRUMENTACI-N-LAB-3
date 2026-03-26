@@ -30,13 +30,15 @@ Ante esta situación, se realizó una verificación del estado de operación del
 
 Con base en lo anterior, se optó por realizar una prueba adicional consistente en acercar una fuente de iluminación externa al sensor, con el fin de evaluar su respuesta ante variaciones más evidentes en la intensidad luminosa. Para ello, se utilizó una linterna, la cual se acercaba y alejaba del sensor en distintos intervalos de tiempo, permitiendo observar cambios claramente distinguibles en la señal registrada. A partir de esta prueba, se evidenció que el sistema respondía adecuadamente a variaciones significativas de luz; sin embargo, se concluyó que el sensor implementado no presentaba la sensibilidad suficiente para detectar las pequeñas variaciones asociadas al volumen sanguíneo periférico. En consecuencia, la señal fotopletismográfica no pudo ser visualizada de manera adecuada bajo las condiciones del montaje realizado.
 
+<div aling="center">
+<img width="231" height="146" alt="image" src="https://github.com/user-attachments/assets/23ff2c6b-0ba3-4ea2-ae08-967880b06f82" />
+</div>
+
 Debido a lo anterior, se optó por sustituir el sensor de reflectancia modificado por un sensor integrado de concentración de oxígeno y ritmo cardiaco MAX30102, el cual está diseñado específicamente para la adquisición de señales fotopletismográficas con alta sensibilidad y estabilidad. Este dispositivo incorpora emisores de luz (generalmente en el espectro rojo e infrarrojo) y un fotodetector, junto con etapas internas de acondicionamiento y conversión analógica-digital, lo que permite obtener directamente una señal PPG con menor susceptibilidad al ruido y a variaciones externas. Gracias a estas características, el MAX30102 resulta más adecuado para la detección de las pequeñas variaciones en el volumen sanguíneo periférico, facilitando la adquisición de una señal más clara y consistente en comparación con el montaje previamente implementado:
 
 <div align="center">
-<img width="231" height="146" alt="image" src="https://github.com/user-attachments/assets/23ff2c6b-0ba3-4ea2-ae08-967880b06f82" />
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/8cdd763b-1f35-487c-9b58-ca236ecbd44c" />
 </div>
-
 
 
 ## Cold Pressor Test (CPT)
