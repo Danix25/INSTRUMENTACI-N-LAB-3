@@ -37,7 +37,7 @@ Con base en lo anterior, se optó por realizar una prueba adicional consistente 
 Debido a lo anterior, se optó por sustituir el sensor de reflectancia modificado por un sensor integrado de concentración de oxígeno y ritmo cardiaco MAX30102, el cual está diseñado específicamente para la adquisición de señales fotopletismográficas con alta sensibilidad y estabilidad. Este dispositivo incorpora emisores de luz (generalmente en el espectro rojo e infrarrojo) y un fotodetector, junto con etapas internas de acondicionamiento y conversión analógica-digital, lo que permite obtener directamente una señal PPG con menor susceptibilidad al ruido y a variaciones externas. Gracias a estas características, el MAX30102 resulta más adecuado para la detección de las pequeñas variaciones en el volumen sanguíneo periférico, facilitando la adquisición de una señal más clara y consistente en comparación con el montaje previamente implementado:
 
 <div align="center">
-<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/8cdd763b-1f35-487c-9b58-ca236ecbd44c" />
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/8cdd763b-1f35-487c-9b58-ca236ecbd44c" />
 </div>
 
 
