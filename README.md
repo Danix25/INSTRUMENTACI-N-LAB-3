@@ -76,10 +76,17 @@ El SPI toma valores en un rango de 0 a 100, donde el intervalo entre 20 y 50 se 
 La formula estándar del índice pletismográfico quirurgico es:
 
 $$
-{SPI} = 100 - (0.33 \cdot {HBI} + 0.67 \cdot {PPGA})
+**{SPI} = 100 - (0.33 \cdot {HBI} + 0.67 \cdot {PPGA})**
 $$
-  
 
+Donde:
+- **HBI (Heart Beat Interval):** Corresponde al intervalo de tiempo entre latidos sucesivos. En este contexto, es importante resaltar que, ante la presencia de un estímulo doloroso, se produce un incremento en la frecuencia cardíaca, lo que conlleva a una disminución del HBI.
+
+- **PPGA (Photoplethysmographic Pulse Wave Amplitude):** Representa la amplitud de la onda de pulso y se define como la diferencia entre el valor máximo (sístole) y el mínimo (diástole) de la señal fotopletismográfica. Dado que el estrés induce vasoconstricción periférica, se reduce el flujo sanguíneo hacia las extremidades, lo que se traduce en una disminución de la amplitud de la señal, es decir, del PPGA.
+
+- **Constantes 0.33 y 0.67:** Estos coeficientes corresponden a los pesos asignados al intervalo entre latidos y a la amplitud de la onda de pulso, respectivamente. En la formulación del índice, se otorga mayor ponderación a la PPGA (67 %) en comparación con el HBI (33 %), debido a que la amplitud de la señal constituye un indicador más sensible y de respuesta más rápida frente a cambios en la actividad del sistema nervioso simpático que las variaciones en la frecuencia cardíaca por sí solas.
+
+  
 
 
 # PARTE C
