@@ -38,6 +38,14 @@ Debido a lo anterior, se optó por sustituir el sensor de reflectancia modificad
 
 ## Cold Pressor Test (CPT)
 
+El Cold Pressor Test (CPT) constituye una metodología ampliamente utilizada en la investigación biomédica para evaluar, de manera controlada, la reactividad cardiovascular y la respuesta fisiológica asociada a estímulos nociceptivos. Esta prueba consiste en la inmersión de una extremidad, generalmente la mano (o el pie), en agua con hielo a temperaturas comprendidas entre 0 y 4 °C, durante un intervalo de tiempo definido que típicamente oscila entre 1 y 3 minutos. 
+
+<div align="center">
+<img width="564" height="842" alt="image" src="https://github.com/user-attachments/assets/eb60e4bd-bf81-4c43-930c-2eb1b7edb8f5" />
+</div>
+
+El estímulo aplicado corresponde a un agente térmico de carácter nociceptivo sostenido, el cual induce una respuesta fisiológica sistémica. Como consecuencia de este estímulo, se activa el sistema nervioso simpático, generando la liberación de catecolaminas, principalmente noradrenalina. Esta activación desencadena una serie de respuestas fisiológicas, entre las que se incluyen el aumento de la presión arterial debido a la vasoconstricción periférica, el incremento de la frecuencia cardíaca y la disminución de la amplitud de la onda de pulso en regiones periféricas, asociada a la reducción del flujo sanguíneo en dichas zonas.
+
 
 # PARTE B
 # PARTE C
