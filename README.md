@@ -74,7 +74,7 @@ Este índice se obtiene a partir de la señal de fotopletismografía (PPG), adqu
 El SPI toma valores en un rango de 0 a 100, donde el intervalo entre 20 y 50 se considera óptimo para una analgesia adecuada durante el procedimiento quirúrgico. Valores superiores a 50 indican un incremento en el nivel de estrés nociceptivo, lo que sugiere la necesidad de una mayor administración de analgésicos.
 
 <div align="center">
-<img width="387" height="287" alt="image" src="https://github.com/user-attachments/assets/fc1fe37a-c29d-494f-ae61-cc28e0f7ea3e" />
+<img width="487" height="387" alt="image" src="https://github.com/user-attachments/assets/fc1fe37a-c29d-494f-ae61-cc28e0f7ea3e" />
 </div>
 
 
