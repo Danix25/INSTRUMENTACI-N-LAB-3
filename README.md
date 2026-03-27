@@ -411,11 +411,11 @@ Por otra parte, el índice de perfusión, definido como la relación entre el fl
 
 # CONCLUSIONES
 
-- Se comprobó que el volumen sanguíneo periférico constituye un indicador inmediato de la activación del sistema nervioso simpático. Asimismo, el estímulo térmico frío induce una vasoconstricción periférica que puede ser detectada mediante la disminución de la amplitud de la señal fotopletismográfica (PPG).
+- Los resultados muestran que el volumen sanguíneo periférico es una señal clara de que el sistema nervioso simpático se está activando. Además, cuando se aplica frío, se produce una vasoconstricción en los vasos sanguíneos periféricos, lo que puede notarse en la reducción de la amplitud de la señal fotopletismográfica (PPG).
 
-- A diferencia del índice de perfusión, el índice pletismográfico quirúrgico (SPI) demostró ser un mejor predictor del estado fisiológico, al integrar tanto la variabilidad cardíaca como la respuesta vascular periférica.
+- A diferencia del índice de perfusión, el índice pletismográfico quirúrgico (SPI) resultó ser un predictor más confiable del estado fisiológico, ya que combina tanto la variabilidad cardíaca como la respuesta vascular periférica.
 
-- El sistema desarrollado evidenció una adecuada capacidad para diferenciar estados fisiológicos, manteniendo valores relativamente estables en un rango entre 30 y 60 en condiciones de reposo, y presentando incrementos hacia valores superiores ante la aplicación del estímulo térmico, lo que permitió detectar de manera efectiva respuestas simpáticas agudas.
+- El sistema desarrollado demostró eficacia para diferenciar los estados fisiológicos, manteniendo valores estables en un rango de 30 a 60 en condiciones de reposo. Al aplicar el estímulo térmico, los valores aumentaron, lo que permitió detectar de manera correcta las respuestas simpáticas agudas.
 
 - El diseño de este tipo de sistemas ambulatorios valida la capacidad de integrar instrumentación electrónica, procesamiento digital de señales y modelos fisiológicos, con el fin de desarrollar soluciones de monitoreo no invasivas, precisas y de bajo costo, destacando el papel fundamental de la ingeniería biomédica en la mejora del bienestar de los pacientes.
 
