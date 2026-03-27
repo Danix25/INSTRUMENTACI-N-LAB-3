@@ -93,7 +93,7 @@ Donde:
 
 - **Constantes 0.33 y 0.67:** Estos coeficientes corresponden a los pesos asignados al intervalo entre latidos y a la amplitud de la onda de pulso, respectivamente. En la formulación del índice, se otorga mayor ponderación a la PPGA (67 %) en comparación con el HBI (33 %), debido a que la amplitud de la señal constituye un indicador más sensible y de respuesta más rápida frente a cambios en la actividad del sistema nervioso simpático que las variaciones en la frecuencia cardíaca por sí solas.
 
-## Codigo Matlab (SPI)
+## Codigo de Adquisión en ESP32 (SPI)
 
 ```c++
 #include <Wire.h>
@@ -132,6 +132,8 @@ void loop() {
     Serial.println(maxValue - irValue);
   }
 }
+```
+
 
 Este código usa el sensor MAX30105 para leer una señal PPG con luz infrarroja y enviarla en tiempo real al computador. Primero configura la comunicación y activa solo el LED infrarrojo, y luego en el loop toma muestras cada 10 ms. En cada lectura obtiene el valor de la señal (irValue) y guarda el valor máximo observado (maxValue). Después calcula maxValue - irValue y eso es lo que envía por el puerto serial. Esto se hace porque el sensor, por su funcionamiento normal, entrega la señal “invertida”: cuando hay un latido hay más sangre, se absorbe más luz y el valor baja, formando valles. Al hacer esa resta, esos valles se convierten en picos hacia arriba.
 
