@@ -95,6 +95,46 @@ Donde:
 
 ## Codigo Matlab (SPI)
 
+```c++
+#include <Wire.h>
+#include "MAX30105.h"
+
+MAX30105 sensor;
+
+unsigned long lastSampleTime = 0;
+const int sampleInterval = 10;
+
+long maxValue = 0;
+
+void setup() {
+  Serial.begin(115200);
+  Wire.begin(21, 22);
+
+  if (!sensor.begin(Wire, I2C_SPEED_FAST)) {
+    while (1);
+  }
+
+  sensor.setup();
+  sensor.setPulseAmplitudeRed(0x00);
+  sensor.setPulseAmplitudeIR(0x2F);
+}
+
+void loop() {
+  if (millis() - lastSampleTime >= sampleInterval) {
+    lastSampleTime = millis();
+
+    long irValue = sensor.getIR();
+
+    if (irValue > maxValue) {
+      maxValue = irValue;
+    }
+
+    Serial.println(maxValue - irValue);
+  }
+}
+
+Este código usa el sensor MAX30105 para leer una señal PPG con luz infrarroja y enviarla en tiempo real al computador. Primero configura la comunicación y activa solo el LED infrarrojo, y luego en el loop toma muestras cada 10 ms. En cada lectura obtiene el valor de la señal (irValue) y guarda el valor máximo observado (maxValue). Después calcula maxValue - irValue y eso es lo que envía por el puerto serial. Esto se hace porque el sensor, por su funcionamiento normal, entrega la señal “invertida”: cuando hay un latido hay más sangre, se absorbe más luz y el valor baja, formando valles. Al hacer esa resta, esos valles se convierten en picos hacia arriba.
+
 
   
 
