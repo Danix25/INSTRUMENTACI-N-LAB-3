@@ -387,6 +387,8 @@ Ahora mostramos cómo funciona el algoritmo en tiempo real, donde se puede ver l
 <img width="600" height="618" alt="Captura de pantalla 2026-03-26 185540" src="https://github.com/user-attachments/assets/76870a8d-0fb7-426a-9c06-b357e5db0f65" />
 </div>
 
+Finalmente, se observa la gráfica de la evolución del SPI en el tiempo. Durante los primeros 40 minutos aproximadamente, el SPI oscila entre 30 y 60, lo cual es un comportamiento normal en reposo, ya que la persona no está completamente bajo el efecto de la analgesia. Después de este periodo, el SPI aumenta al aplicar el estímulo de cold pressor, que genera vasoconstricción y disminuye la amplitud de la señal, es decir, el PPGA. Luego, al retirar el estímulo, el SPI vuelve a disminuir, regresando a valores más cercanos a los iniciales.
+
 
 
 
