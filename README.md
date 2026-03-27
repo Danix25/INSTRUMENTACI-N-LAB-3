@@ -364,7 +364,28 @@ set(gca,'Color','k')
 set(gca,'XColor','w','YColor','w')
 
 ```
+Este código en MATLAB está diseñado para leer una señal PPG en tiempo real desde un sensor (como el MAX30105) a través del puerto serial, procesarla y visualizarla mientras se adquiere. Al inicio, se configura la conexión, se definen buffers para mostrar una ventana de la señal en vivo y se inicializan varias variables que servirán para guardar datos, detectar eventos importantes (como picos y valles) y calcular el SPI. También se prepara la gráfica donde se verá la señal en tiempo real junto con los puntos detectados.
 
+Una vez empieza el programa, entra en un ciclo que dura el tiempo que el usuario indicó. Dentro de este ciclo se leen los datos que llegan del sensor y se van almacenando junto con su tiempo correspondiente. Al mismo tiempo, se actualiza una ventana móvil de datos para poder graficar la señal de forma continua. Esto permite ver cómo cambia la señal PPG en vivo, lo cual es clave para monitoreo y análisis en tiempo real.
+
+Luego viene la parte más importante: la detección de picos y valles. El código usa una lógica basada en contar cuántas veces seguidas la señal sube (método del alpinista). Cuando detecta suficientes subidas y luego una bajada, identifica un posible pico (latido). Antes de confirmarlo, aplica varios filtros para evitar errores, como verificar que no haya picos muy seguidos, que los valores no sean absurdos y que la amplitud del pulso sea suficientemente grande. Además, va registrando el valle previo a cada pico, lo cual es necesario para calcular la amplitud de la señal.
+
+Con cada pico válido detectado, el código calcula dos variables fisiológicas importantes: el HBI (intervalo entre latidos), que está relacionado con la frecuencia cardíaca, y el PPGA (amplitud del pulso), que refleja la fuerza del flujo sanguíneo. Estos valores luego se normalizan para llevarlos a un rango común entre 0 y 1, lo que permite combinarlos de forma consistente.
+
+Finalmente, se calcula el SPI, que es un índice que combina tanto la frecuencia cardíaca como la amplitud del pulso para dar una medida más global del estado fisiológico.  Mientras todo esto ocurre, la gráfica se actualiza en tiempo real mostrando la señal, los picos, los valles y al final se presenta una gráfica adicional con la evolución del SPI a lo largo del tiempo.
+
+## Resultados y Analisis
+
+
+<div align="center">
+<img width="600" height="612" alt="Captura de pantalla 2026-03-26 185017" src="https://github.com/user-attachments/assets/db94f21b-cd69-48db-8485-87b374ab508f" />
+</div>
+
+Ahora mostramos cómo funciona el algoritmo en tiempo real, donde se puede ver la señal PPG junto con los picos y valles detectados. Estos puntos indican los latidos y los mínimos de la señal, lo que permite entender fácilmente cómo el algoritmo identifica cada pulso. La gráfica ayuda a ver de forma clara que la detección está funcionando correctamente.
+
+<div align="center">
+<img width="600" height="618" alt="Captura de pantalla 2026-03-26 185540" src="https://github.com/user-attachments/assets/76870a8d-0fb7-426a-9c06-b357e5db0f65" />
+</div>
 
 
 
