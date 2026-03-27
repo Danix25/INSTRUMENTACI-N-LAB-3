@@ -137,8 +137,236 @@ void loop() {
 
 Este código usa el sensor MAX30105 para leer una señal PPG con luz infrarroja y enviarla en tiempo real al computador. Primero configura la comunicación y activa solo el LED infrarrojo, y luego en el loop toma muestras cada 10 ms. En cada lectura obtiene el valor de la señal (irValue) y guarda el valor máximo observado (maxValue). Después calcula maxValue - irValue y eso es lo que envía por el puerto serial. Esto se hace porque el sensor, por su funcionamiento normal, entrega la señal “invertida”: cuando hay un latido hay más sangre, se absorbe más luz y el valor baja, formando valles. Al hacer esa resta, esos valles se convierten en picos hacia arriba.
 
+## Procesamiento en Matlab (SPI)
 
-  
+```MATLAB
+clc; clear; close all 
+
+s = serialport("COM10",115200);
+configureTerminator(s,"LF");
+flush(s);
+
+N = 300;
+bufferV = nan(1,N);
+bufferT = nan(1,N);
+
+x = input("Ingrese el tiempo deseado de lectura: ");
+
+tiempo = [];
+senal = [];
+
+psi_t = [];
+psi_val = [];
+
+num_upsteps = 0;
+threshold = 6;
+prev_dato = NaN;
+prev_t = NaN;
+
+picos_t = [];
+picos_v = [];
+
+valles_t = [];
+valles_v = [];
+
+ultimo_pico_t = NaN;
+
+valle_actual = Inf;
+valle_t = NaN;
+
+ventana_norm = 200;
+SPI_prev = NaN;
+PPGA_hist = [];
+
+figure(1);
+h = plot(bufferT, bufferV, 'b', 'LineWidth', 2); hold on
+h_picos = plot(nan, nan, 'ro', 'MarkerFaceColor','r');
+h_valles = plot(nan, nan, 'go', 'MarkerFaceColor','g');
+
+grid on
+xlabel("Tiempo (s)")
+ylabel("Amplitud")
+title("Señal PPG en tiempo real")
+
+set(gcf,'Color','k')  
+set(gca,'Color','k') 
+set(gca,'XColor','w','YColor','w')
+
+tic
+while toc < x
+    if s.NumBytesAvailable > 0
+        dato = str2double(readline(s));
+        
+        if ~isnan(dato)
+            t = toc;
+
+            tiempo(end+1) = t;
+            senal(end+1) = dato;
+
+            bufferV = [bufferV(2:end) dato];
+            bufferT = [bufferT(2:end) t];
+
+            if dato < valle_actual
+                valle_actual = dato;
+                valle_t = t;
+            end
+
+            if ~isnan(prev_dato)
+                
+                if dato > prev_dato
+                    num_upsteps = num_upsteps + 1;
+                else
+                    if num_upsteps >= threshold
+                        
+                        if ~isnan(ultimo_pico_t)
+                            delta_t = prev_t - ultimo_pico_t;
+                        else
+                            delta_t = Inf;
+                        end
+
+                        if delta_t <= 0.4
+                            num_upsteps = 0;
+                            continue;
+                        end
+
+                        pico_t = prev_t;
+                        pico_v = prev_dato;
+
+                        if pico_v > 1e5
+                            num_upsteps = 0;
+                            valle_actual = pico_v;
+                            valle_t = pico_t;
+                            continue;
+                        end
+
+                        valle_v = valle_actual;
+                        valle_t_local = valle_t;
+
+                        PPGA = pico_v - valle_v;
+
+                        if ~isempty(PPGA_hist)
+                            if PPGA < 0.3 * mean(PPGA_hist)
+                                num_upsteps = 0;
+                                continue;
+                            end
+                        end
+
+                        picos_t(end+1) = pico_t;
+                        picos_v(end+1) = pico_v;
+
+                        valles_t(end+1) = valle_t_local;
+                        valles_v(end+1) = valle_v;
+
+                        ultimo_pico_t = pico_t;
+
+                        if length(picos_t) > 1
+                            HBI = pico_t - picos_t(end-1);
+                        else
+                            HBI = NaN;
+                        end
+
+                        if HBI < 0.4 || HBI > 1.5
+                            HBI = NaN;
+                        end
+
+                        PPGA_hist(end+1) = PPGA;
+
+                        if length(PPGA_hist) > ventana_norm
+                            segmento = PPGA_hist(end-ventana_norm+1:end);
+                        else
+                            segmento = PPGA_hist;
+                        end
+
+                        min_ppga = min(segmento);
+                        max_ppga = max(segmento);
+
+                        PPGA_norm = (PPGA - min_ppga) / (max_ppga - min_ppga + eps);
+                        PPGA_norm = min(max(PPGA_norm, 0), 1);
+
+                        if ~isnan(HBI)
+                            HBI_norm = (HBI - 0.4) / (1.2 - 0.4);
+                            HBI_norm = min(max(HBI_norm, 0), 1);
+
+                            HR_component = 1 - HBI_norm;
+                            AMP_component = 1 - PPGA_norm;
+
+                            SPI = 100 * (0.5 * HR_component + 0.5 * AMP_component);
+                        else
+                            SPI = NaN;
+                        end
+
+                        if ~isnan(SPI)
+                            if ~isnan(SPI_prev)
+                                SPI = 0.8 * SPI_prev + 0.2 * SPI;
+                            end
+                            SPI_prev = SPI;
+                        end
+
+                        if ~isnan(SPI)
+                            psi_t(end+1) = pico_t;
+                            psi_val(end+1) = SPI;
+                        end
+
+                        fprintf('SPI: %.0f\n', SPI);
+
+                        valle_actual = pico_v;
+                        valle_t = pico_t;
+
+                        threshold = max(3, 0.3 * num_upsteps);
+                    end
+                    
+                    num_upsteps = 0;
+                end
+            end
+
+            prev_dato = dato;
+            prev_t = t;
+
+            if ~isempty(bufferT)
+                t_min = bufferT(1);
+                idx = picos_t >= t_min;
+                picos_t = picos_t(idx);
+                picos_v = picos_v(idx);
+
+                idx = valles_t >= t_min;
+                valles_t = valles_t(idx);
+                valles_v = valles_v(idx);
+            end
+
+            set(h, 'XData', bufferT, 'YData', bufferV);
+            set(h_picos, 'XData', picos_t, 'YData', picos_v);
+            set(h_valles, 'XData', valles_t, 'YData', valles_v);
+
+            ymin = min(bufferV);
+            ymax = max(bufferV);
+
+            if ~isnan(ymin) && ~isnan(ymax) && ymin ~= ymax
+                margen = 0.1 * (ymax - ymin);
+                ylim([ymin - margen, ymax + margen])
+            end
+
+            drawnow limitrate
+        end
+    end
+end
+
+
+
+close(1);
+figure
+plot(psi_t, psi_val, 'm', 'LineWidth', 2); hold on
+grid on
+xlabel("Tiempo (s)")
+ylabel("SPI")
+title("Índice SPI en el tiempo")
+set(gcf,'Color','k')  
+set(gca,'Color','k') 
+set(gca,'XColor','w','YColor','w')
+
+```
+
+
+
 
 
 # PARTE C
