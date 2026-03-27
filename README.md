@@ -392,7 +392,21 @@ Finalmente, se observa la gráfica de la evolución del SPI en el tiempo. Durant
 
 
 
-# PARTE C
+# DISCUSIÓN
+## - ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?
+
+La relación entre el volumen sanguíneo periférico y el balance autonómico es de carácter inverso, dado que un incremento en la actividad del sistema nervioso simpático induce vasoconstricción periférica. Este fenómeno reduce el volumen sanguíneo local, lo que se traduce en una disminución de la amplitud de la onda fotopletismográfica. Esta variable constituye la componente más sensible del índice pletismográfico quirúrgico (SPI), ya que el lecho vascular periférico presenta una respuesta más rápida ante la liberación de catecolaminas en comparación con las variaciones en la frecuencia cardíaca.
+
+
+## - ¿Cómo se compara el SPI con otros índices comúnmente empleados en cirugía, como el índice nocicepción-analgesia (ANI) y el índice de perfusión?
+
+Considerando que el índice de nocicepción-analgesia (ANI) requiere un monitoreo más invasivo a nivel torácico para evaluar el tono parasimpático, el índice pletismográfico quirúrgico (SPI) se presenta como una alternativa ambulatoria y menos invasiva, al aprovechar la alta sensibilidad de la vasculatura periférica frente a la activación del sistema nervioso simpático.
+
+<div align="center">
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/f9928cf1-e313-498a-bff3-a1882283dc1b" />
+</div>
+
+Por otra parte, el índice de perfusión, definido como la relación entre el flujo sanguíneo pulsátil y el flujo no pulsátil, constituye un indicador más básico y unidimensional de la vasoconstricción local. En contraste, el SPI integra tanto la amplitud de la señal fotopletismográfica como el intervalo entre latidos, lo que permite una interpretación más robusta y estandarizada del balance nocicepción-analgesia, independientemente de las condiciones basales del sujeto. Esto representa una ventaja significativa frente al índice de perfusión, el cual presenta una alta susceptibilidad a factores externos, como la posición del sensor o las variaciones de temperatura.
 
 
 # CONCLUSIONES
